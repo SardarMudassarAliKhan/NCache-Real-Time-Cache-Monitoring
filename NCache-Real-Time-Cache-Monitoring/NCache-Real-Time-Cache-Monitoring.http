@@ -1,0 +1,6 @@
+@NCache_Real_Time_Cache_Monitoring_HostAddress = http://localhost:5023
+
+GET {{NCache_Real_Time_Cache_Monitoring_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

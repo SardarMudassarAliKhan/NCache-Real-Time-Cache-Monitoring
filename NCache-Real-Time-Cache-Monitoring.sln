@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NCache-Real-Time-Cache-Monitoring", "NCache-Real-Time-Cache-Monitoring\NCache-Real-Time-Cache-Monitoring.csproj", "{77843528-9B27-42BD-A98F-83E75C3C7591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77843528-9B27-42BD-A98F-83E75C3C7591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77843528-9B27-42BD-A98F-83E75C3C7591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77843528-9B27-42BD-A98F-83E75C3C7591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77843528-9B27-42BD-A98F-83E75C3C7591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE58DC74-06FE-4E61-A96D-A828B9904119}
+	EndGlobalSection
+EndGlobal
