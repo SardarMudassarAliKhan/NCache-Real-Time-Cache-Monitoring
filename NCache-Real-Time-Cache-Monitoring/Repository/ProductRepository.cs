@@ -5,7 +5,7 @@ using NCache_Real_Time_Cache_Monitoring.Model;
 
 namespace NCache_Real_Time_Cache_Monitoring.Repository
 {
-    public class ProductRepository : IRepository<Product> 
+    public class ProductRepository : IProductRepository<Product> 
     {
         private readonly ICache _cache;
         private readonly ProductDbContext _dbContext;

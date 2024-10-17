@@ -1,6 +1,8 @@
 using Alachisoft.NCache.Client;
 using Microsoft.EntityFrameworkCore;
 using NCache_Real_Time_Cache_Monitoring.Data;
+using NCache_Real_Time_Cache_Monitoring.IRepository;
+using NCache_Real_Time_Cache_Monitoring.Model;
 using NCache_Real_Time_Cache_Monitoring.Repository;
 
 namespace NCache_Real_Time_Cache_Monitoring
@@ -16,7 +18,9 @@ namespace NCache_Real_Time_Cache_Monitoring
 
             // Configure Entity Framework with SQLite
             builder.Services.AddDbContext<ProductDbContext>(options =>
-                options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
+           .EnableDetailedErrors()
+           .EnableSensitiveDataLogging());
 
             var cacheName = configuration["NCacheConfig:CacheName"];
             var server = configuration["NCacheConfig:Server"];
@@ -29,7 +33,7 @@ namespace NCache_Real_Time_Cache_Monitoring
 
             builder.Services.AddSingleton<ICache>(CacheManager.GetCache(cacheName, options));
 
-            builder.Services.AddScoped<ProductRepository>();
+            builder.Services.AddScoped<IProductRepository<Product>, ProductRepository>();
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

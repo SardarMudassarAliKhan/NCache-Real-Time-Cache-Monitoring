@@ -1,6 +1,6 @@
 ﻿namespace NCache_Real_Time_Cache_Monitoring.IRepository
 {
-    public interface IRepository<T>
+    public interface IProductRepository<T>
     {
         // Cache Operations
         void AddToCache(T item);

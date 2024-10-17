@@ -8,9 +8,9 @@ namespace NCache_Real_Time_Cache_Monitoring.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly IRepository<Product> _repository;
+        private readonly IProductRepository<Product> _repository;
 
-        public ProductsController(IRepository<Product> repository)
+        public ProductsController(IProductRepository<Product> repository)
         {
             _repository = repository;
         }
